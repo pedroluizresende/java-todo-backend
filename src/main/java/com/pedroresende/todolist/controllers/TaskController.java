@@ -35,6 +35,11 @@ public class TaskController {
     return ResponseEntity.status(HttpStatus.CREATED).body(taskService.create(task));
   }
 
+  @GetMapping("/test")
+  public ResponseEntity<String> test() {
+    return ResponseEntity.ok("Esta funcionando");
+  }
+
   @GetMapping
   public ResponseEntity<List<Task>> getAll() {
     return ResponseEntity.ok(taskService.getAll());
